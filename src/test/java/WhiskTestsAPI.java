@@ -7,7 +7,6 @@ import model.Whisk;
 import model.WhiskResponse;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
