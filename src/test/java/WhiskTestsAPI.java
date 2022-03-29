@@ -6,6 +6,7 @@ import io.restassured.specification.RequestSpecification;
 import model.Whisk;
 import model.WhiskResponse;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -18,7 +19,7 @@ public class WhiskTestsAPI {
     RequestSpecification requestSpecification = given().headers("Authorization", "Bearer " + bearerToken);
     String id;
 
-    @BeforeTest
+    @BeforeMethod
     public void precondition() throws JsonProcessingException {
         ObjectMapper objectMapper = new ObjectMapper();
         Whisk whisk = new Whisk("string", false);
